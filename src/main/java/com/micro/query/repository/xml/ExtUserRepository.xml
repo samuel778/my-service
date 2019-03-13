@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.query.repository.ExtUserRepository">
+
+    <select id="getUserCarAuthList" resultType="com.micro.query.mapper.ExtUserCarAuthInfo">
+        SELECT
+               U.plate,
+               U.create_time AS createTime,
+               A.id AS authId,
+               A.auth_status AS authStatus
+        FROM
+             user_car U
+                 INNER JOIN user_car_auth_log A ON U.id = A.user_car_id
+        WHERE
+                U.user_id = #{id}
+    </select>
+</mapper>
