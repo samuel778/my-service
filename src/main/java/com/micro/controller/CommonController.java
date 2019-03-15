@@ -6,7 +6,7 @@ import com.micro.core.exception.LoginTimeoutException;
 import com.micro.domain.entry.User;
 import com.micro.domain.service.CommonService;
 import com.micro.query.JsonResult;
-import com.micro.query.mapper.LoginResponse;
+import com.micro.query.dto.LoginResponse;
 import com.micro.utils.captcha.ImageCode;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

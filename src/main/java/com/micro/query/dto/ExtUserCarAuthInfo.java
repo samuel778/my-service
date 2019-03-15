@@ -1,4 +1,4 @@
-package com.micro.query.mapper;
+package com.micro.query.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

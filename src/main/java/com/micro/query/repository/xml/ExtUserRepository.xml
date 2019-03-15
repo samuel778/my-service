@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.micro.query.repository.ExtUserRepository">
 
-    <select id="getUserCarAuthList" resultType="com.micro.query.mapper.ExtUserCarAuthInfo">
+    <select id="getUserCarAuthList" resultType="com.micro.query.dto.ExtUserCarAuthInfo">
         SELECT
                U.plate,
                U.create_time AS createTime,

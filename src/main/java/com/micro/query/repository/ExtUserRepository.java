@@ -1,6 +1,6 @@
 package com.micro.query.repository;
 
-import com.micro.query.mapper.ExtUserCarAuthInfo;
+import com.micro.query.dto.ExtUserCarAuthInfo;
 import org.apache.ibatis.annotations.Param;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;

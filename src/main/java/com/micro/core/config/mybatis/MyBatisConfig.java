@@ -33,7 +33,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
 	public SqlSessionFactory sqlSessionFactoryBean() {
 		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 		bean.setDataSource(dataSource);
-		bean.setTypeAliasesPackage("com.mcro.domain");
+		bean.setTypeAliasesPackage("com.micro.domain.entry,com.micro.query.dto");
 		// 分页插件
 		PageInterceptor pageHelper = new PageInterceptor();
 		Properties properties = new Properties();

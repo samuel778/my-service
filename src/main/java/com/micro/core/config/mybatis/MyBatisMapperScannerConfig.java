@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import tk.mybatis.mapper.common.MySqlMapper;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import java.util.Properties;
@@ -26,9 +27,9 @@ public class MyBatisMapperScannerConfig {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         mapperScannerConfigurer.setAnnotationClass(MapperScan.class);
-        mapperScannerConfigurer.setBasePackage("com.micro.domain.repository");
+        mapperScannerConfigurer.setBasePackage("com.micro.domain.repository,com.micro.query.repository");
         Properties properties = new Properties();
-        properties.put("mappers", "tk.mybatis.repository.common.Mapper,tk.mybatis.repository.common.MySqlMapper");
+        properties.put("mappers", "tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.MySqlMapper");
 		mapperScannerConfigurer.setProperties(properties );
         return mapperScannerConfigurer;
     }
